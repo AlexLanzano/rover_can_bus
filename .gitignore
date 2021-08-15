@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+rpi/blink
 
 # Linker output
 *.ilk
