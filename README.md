@@ -3,9 +3,13 @@ Some example code to interface with the CAN bus on the Raspberry Pi and Teensy 4
 
 ## Configuring the Pi
 To setup the Pi using the Raspberry Pi CAN Bus Hat run this command: <br />
-`OSC_FREQ=16000000 INT_PIN=12 make setup_can`
+`make setup_can OSC_FREQ=16000000 INT_PIN=12`
 
 If using different hardware set the above environment variables accordingly
+
+You also need to enable the CAN network interface (This will need to be run on every reboot):
+`make enable_can_interface BAUD_RATE=250000`
+The teensy example code uses a baud rate of 250k
 
 ## Building and Running the example code
 To build and run the code for the Raspberry Pi run the following commands:<br />

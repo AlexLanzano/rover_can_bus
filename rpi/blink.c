@@ -51,7 +51,7 @@ int main(int argc, char **argv)
         // Send the frame over the CAN bus
         error = write(socket_fd, &frame, sizeof(struct can_frame));
         if (error < 0) {
-            perror("Failed to send CAN frameddasd");
+            perror("Failed to send CAN frame");
         }
 
         // Toggle the byte between 1 and 0 in the data buffer, telling the teensy to turn on/off the LED

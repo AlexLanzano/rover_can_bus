@@ -16,4 +16,7 @@ run_blink_example: $(RPI_BLINK_EXAMPLE_EXE)
 
 # RPI CAN setup targets
 setup_can:
-	bash rpi_can_setup.sh
+	echo "dtoverlay=mcp2515-can0,oscillator=${OSC_FREQ},interrupt=${INT_PIN}" | sudo tee -a /boot/config.txt
+
+enable_can_interface:
+	sudo /sbin/ip link set can0 up type can bitrate $(BAUD_RATE)
