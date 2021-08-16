@@ -7,8 +7,8 @@ To setup the Pi using the Raspberry Pi CAN Bus Hat run this command: <br />
 
 If using different hardware set the above environment variables accordingly
 
-You also need to enable the CAN network interface (This will need to be run on every reboot):
-`make enable_can_interface BAUD_RATE=250000`
+You also need to enable the CAN network interface (This will need to be run on every reboot): <br />
+`make enable_can_interface BAUD_RATE=250000` <br />
 The teensy example code uses a baud rate of 250k
 
 ## Building and Running the example code
